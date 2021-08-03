@@ -1,0 +1,28 @@
+Aggressive,Dragonstrike,10,1,Grimm,None,Bash: End the Duel if this attacks Damages the Active Player. Attrition Damage is doubled then distributed evenly between all players with the Active Player receiving the largest amount.,1
+Aggressive,Shadowfall,10,0,Magic,None,The Speed of this attack is equal to the total number of cards in all players' hands. This attack does not benefit from Speed or Damage bonuses.,1
+Aggressive,To The Slaughter,9,1,Grimm,None,! Minions in play gain a +1 Speed and +1 Damage token. Each hero loses Aura equal to the number of Minions in play if this attack deals damage.,1
+Aggressive,The Ones You Love,8,2,Emotion,None,Salem damages the player with the lowest remaining Aura clockwise instead. End the Duel and deal attrition damage to the player instead.,2
+Aggressive,Eternal Howl,7,0,Emotion,None,Each player discards a card if this attack hits. At the beginning of the next round each player draws a card and must use the drawn card as their action.,2
+Aggressive,Confrontation,7,1,Melee,None,! Salem gains a +1 Speed and +1 Damage Bonus at the end of the Round for each Hero that dealt Damage to Salem this round.,3
+Aggressive,Feast of Darkness,6,1,Magic,None,This attack gains +2 Speed and +1 Damage for each player Assisting or Comboin with the Active Player.,2
+Aggressive,Nightmate Manifestation,5,2,Emotion,None,This attack gains +3 Speed if the Active Player's Ultimate is not ready. Replace the Active Player's attack card with their Ultimate if it is ready.,2
+Aggressive,Destructive Wave,10,0,Magic,None,Counter: It deals Damage equal to the Speed difference between Salem and the hit Hero.,3
+Balanced,Life and Death,7,0,Magic,None,Each player's Aura is halved rounded up if this attack hits.,1
+Balanced,Seed of Doubt,3,0,Magic,None,! The Active Player must choose: The Active Player gains -1 Speed for the rest of the battle OR all other players lose the highest speed card in their hand until the end of the Battle.,1
+Balanced,Moonshatter,8,1,Emotion,None,The Duel ends if this attack hits. Salem gains +1 Speed and +1 Damage Bonus at the begining of the next Duel.,1
+Balanced,Unending Pursuit,6,2,Emotion,None,! Players cannot rest until the end of this Duel. Immediately draw and replace it with the next non-event card in Salem's deck if this attack would miss.,2
+Balanced,Stranglehold,7,1,Grimm,None,Each Assisting or Comboing player takes 2 damage if this attack fails.,2
+Balanced,Loyal Beast,5,1,Grimm,None,! Draw and play a minion placing it next to Salem's deck. The minion receives the Damage instead if Salem would receive Damage. No Fury is gained from the damage dealt.,2
+Balanced,Assuredness,6,3,Melee,None,! Salem gains +2 Speed Bonus at the end of the Round.,3
+Subtle,Overwhelming Odds,7,1,Grimm,None,The Active Player's Fury Track is reset if this attack Damages the Active Player.,1
+Subtle,From Shadows,2,0,Grimm,None,! Draw and play Minions equal to the number of players currently in play.,1
+Subtle,Terrifying Presence,6,1,Emotion,None,! Sideline Players cannot Assist or Combo with the Active Player.,1
+Subtle,Dark Divide,6,2,Magic,None,! All Sideline Players not Assisting or Comboing discard their lowest speed card. Player's choice on a tie.,2
+Subtle,Best Laid Plans,4,1,Magic,None,! All players' Next Round effects do not activate next round. Salem gains a +1 Speed Bonus at the end of the Round.,2
+Subtle,Blackout,5,2,Magic,None,! Semblances cannot be used until the end of this Duel.,2
+Subtle,Mirror Mirror,3,1,Magic,None,! This round Salem heals equal to Damage received rather than receiving it. The Active Player gains fury as normal if they hit.,3
+Event,Final Approach,0,0,Event,None,Salem begins each Duel on the second space of her Fury track and her Balanced attacks gain +1 Speed permanently.,1
+Event,Witch's Raiment,0,0,Event,None,Salem gains +1 Speed and +1 Damage permanently. Increase this to +2 Speed and +2 Damage permanently if the final event card has been drawn.,1
+Event,The Girl Who Wanted Power,0,0,Event,None,At the beginning of each Duel draw and put a card from Cinder's deck without Events into play unrevealed. If a Sideline Player does not engage this card by the end of the Round reveal the card and deal its Damage and effects to the Active Player then discard it.,1
+Event,Immortal Curse,0,0,Event,None,Salem gains +1 Speed to her Subtle attacks permanently and the Damage they cause heals Salem equal to the Damage dealt.,1
+Event,Hopelessness,0,0,Event,None,Upcoming Sideline Players draw/discard to five instead of six at the end of each Duel.,1

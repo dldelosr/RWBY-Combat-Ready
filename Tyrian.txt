@@ -1,0 +1,29 @@
+Aggressive,Maniacal Combo,10,1,Melee,Sting,! Tyrian gains +1 Speed next Round.,2
+Aggressive,Blood Lust,10,1,Melee,Chaos,! Tyrian gains +1 Speed Bonus at the end of the Round.,1
+Aggressive,Venom Sting,9,1,Melee,Sting,Poison: Next Round the player has -1 Speed if this attack hits.,2
+Aggressive,Predator Hunt,9,1,Melee,None,This attack deals +3 Damage to Heroes with full Aura.,1
+Aggressive,Spin Slash,8,2,Melee,Sting,All Minions take 1 Damage. This attack gains Speed equal to the amount of Minions destroyed.,2
+Aggressive,Gauntlet Fire,7,2,Ranged,None,Ignore all of the Active Player's effects and Bonuses if this attack has no Speed Bonuses.,3
+Aggressive,Wild Reversal,6,2,Melee,Chaos,! Immediately draw and replace it with the next non-Event card in Tyrian's deck if this attack has lower Speed than the Active Player then resolve combat as normal.,2
+Aggressive,Wrist Pincers,5,3,Melee,None,! This attack gains +3 Speed if the Active Player is in Bash range.,2
+Balanced,Scorpio Shot,8,0,Ranged,None,Counter: It deals Damage equal to the Speed difference between the Villain and the hit Hero if this attack hits.,2
+Balanced,Lethal Injection,7,2,Melee,Sting,Poison: Next Round the player has -1 Speed if this attack hits.,2
+Balanced,Piercing Jab,7,1,Melee,Chaos,Deal 2 Damage to the Hero(es) with the most Aura if this attack hits.,1
+Balanced,Tail Slam,6,2,Ranged,Sting,Disable: Exhaust the Hero's Semblance marker if this attack deals Damage.,2
+Balanced,Isolate,6,1,Ranged,None,! Sideline Players cannot Combo with the Acitve Player for the rest of the Duel.,1
+Balanced,Flesh Wound,5,2,Melee,Sting,! Ranged attacks have -1 Speed against Tyrian this round.,2
+Balanced,Bullet Frenzy,5,2,Ranged,Chaos,! Tyrian gains +1 Speed Bonus at the end of the Round.,1
+Balanced,Hidden Scrapes,4,1,Melee,Sting,! All Heroes have -1 Speed next Round.,2
+Balanced,Infected Glory,4,1,Melee,Sting,! All Heroes have -1 Speed next Round. Tyrian gains +1 Damage Bonus at the end of the Round.,1
+Subtle,Tasty Screams,7,1,Melee,Chaos,Tyrian heals Aura equal to the Damage dealt if this attack deals Damage.,2
+Subtle,Faunus Sense,6,1,Ranged,Sting,! This attack gains +2 Speed if Tyrian has no Speed Bonuses.,2
+Subtle,Lose Control,6,2,Melee,Chaos,! This attack gains +1 Speed for each Hero with over half their Aura remaining.,1
+Subtle,Crouching Stance,5,2,Melee,None,! Tyrian gains +1 Speed Bonus and +1 Damage Bonus at the end of the Round.,2
+Subtle,Trapped Prey,5,2,Ranged,None,! Heroes cannot use their Semblances for the rest of the Duel.,1
+Subtle,Paralyzation,4,0,Sting,None,! All Heroes attacking Tyrian have -1 Speed next Round.,2
+Subtle,Crazy Killer,3,1,Melee,Chaos,End the Duel if Tyrian takes more than 3 Damage this Round.,2
+Event,Scorpion Venom,0,0,None,None,They are poisoned if a Hero is hit by a Sting attack. Deal 1 Damage to all poisoned Heroes at the end of every Round. Heroes may remove the poison by performing the Rest action.,1
+Event,Animalistic,0,0,None,None,Tyrian deals 2 Damage to the Active Player at the end of every Duel in which the Villain was not Bashed.,1
+Event,Trigger Happy,0,0,None,None,Tyrian gains +1 Speed and +1 Damage permanently.,1
+Event,Screw Loose,0,0,None,None,All of Tyrian's Chaos attacks gain +1 Damage permanently.,1
+Event,Surpise Attack,0,0,None,None,Tyrian starts the next Duel with 2 extra Fury.,1
