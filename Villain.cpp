@@ -26,7 +26,7 @@ Villain::Villain(const Villain &copy) {
 }
 Villain::~Villain() { }
 
-void Villain::readFile(const string filename) {
+bool Villain::readFile(const string filename) {
     string stance = "";
     string name = "";
     int speed = -1;
@@ -43,64 +43,72 @@ void Villain::readFile(const string filename) {
     ifstream din;
     din.open(filename);
     
-    while ( getline(din, cardline) ) {
-        // cout << cardline << endl;
-        delimiter = cardline.find(",");
-        stance = cardline.substr(0, delimiter);
-        newCard.setStance(stance);
-        //cout << stance << endl;
-        cardline.erase(0, delimiter + 1);
-        
-        delimiter = cardline.find(",");
-        name = cardline.substr(0, delimiter);
-        newCard.setName(name);
-        //cout << name << endl;
-        cardline.erase(0, delimiter + 1);
-        
-        delimiter = cardline.find(",");
-        //cout << cardline.substr(0, delimiter) << endl;
-        speed = stoi(cardline.substr(0, delimiter));
-        newCard.setSpeed(speed);
-        //cout << speed << endl;
-        cardline.erase(0, delimiter + 1);
-        
-        delimiter = cardline.find(",");
-        //cout << cardline.substr(0, delimiter) << endl;
-        damage = stoi(cardline.substr(0, delimiter)); // string to int
-        newCard.setDamage(damage);
-        //cout << damage << endl;
-        cardline.erase(0, delimiter + 1);
-        
-        delimiter = cardline.find(",");
-        type1 = cardline.substr(0, delimiter);
-        cardline.erase(0, delimiter + 1);
-        delimiter = cardline.find(",");
-        type2 = cardline.substr(0, delimiter);
-        //cout << type1 << " " << type2 << endl;
-        cardline.erase(0, delimiter + 1);
-        newCard.setTypes(type1, type2);
-        
-        delimiter = cardline.find(",");
-        effect = cardline.substr(0, delimiter);
-        newCard.setEffect(effect);
-        //cout << effect << endl;
-        cardline.erase(0, delimiter + 1);
-        
-        delimiter = cardline.find(",");
-        //cout << cardline.substr(0, delimiter) << endl;
-        quantity = stoi(cardline.substr(0, delimiter));
-        newCard.setQuantity(quantity);
-        //cout << damage << endl;
-        cardline.erase(0, delimiter + 1);
-        
-        //newCard.print();
-        for (int i = 0; i < quantity; i++) {
-            newDeck.push_back(newCard);
-            numCards++;
-            //newCard.print();
-        }
-    }
-    din.close();
+    if (din)
+    { 
+		while ( getline(din, cardline) ) {
+			// cout << cardline << endl;
+			delimiter = cardline.find(",");
+			stance = cardline.substr(0, delimiter);
+			newCard.setStance(stance);
+			//cout << stance << endl;
+			cardline.erase(0, delimiter + 1);
+			
+			delimiter = cardline.find(",");
+			name = cardline.substr(0, delimiter);
+			newCard.setName(name);
+			//cout << name << endl;
+			cardline.erase(0, delimiter + 1);
+			
+			delimiter = cardline.find(",");
+			//cout << cardline.substr(0, delimiter) << endl;
+			speed = stoi(cardline.substr(0, delimiter));
+			newCard.setSpeed(speed);
+			//cout << speed << endl;
+			cardline.erase(0, delimiter + 1);
+			
+			delimiter = cardline.find(",");
+			//cout << cardline.substr(0, delimiter) << endl;
+			damage = stoi(cardline.substr(0, delimiter)); // string to int
+			newCard.setDamage(damage);
+			//cout << damage << endl;
+			cardline.erase(0, delimiter + 1);
+			
+			delimiter = cardline.find(",");
+			type1 = cardline.substr(0, delimiter);
+			cardline.erase(0, delimiter + 1);
+			delimiter = cardline.find(",");
+			type2 = cardline.substr(0, delimiter);
+			//cout << type1 << " " << type2 << endl;
+			cardline.erase(0, delimiter + 1);
+			newCard.setTypes(type1, type2);
+			
+			delimiter = cardline.find(",");
+			effect = cardline.substr(0, delimiter);
+			newCard.setEffect(effect);
+			//cout << effect << endl;
+			cardline.erase(0, delimiter + 1);
+			
+			delimiter = cardline.find(",");
+			//cout << cardline.substr(0, delimiter) << endl;
+			quantity = stoi(cardline.substr(0, delimiter));
+			newCard.setQuantity(quantity);
+			//cout << damage << endl;
+			cardline.erase(0, delimiter + 1);
+			
+			//newCard.print();
+			for (int i = 0; i < quantity; i++) {
+				newDeck.push_back(newCard);
+				numCards++;
+				//newCard.print();
+			}
+		}
+		din.close();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 void Villain::printDeck() {
