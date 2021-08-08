@@ -136,7 +136,7 @@ void Villain::shuffle() {
     countTotalEvents();
     int numCardsPerEvent = 1 + (numCards / (numEvents + 1));
     //cout << numCardsPerEvent << endl;
-    //srand(time(NULL));
+    srand(time(NULL));
     random_shuffle(newDeck.begin(), newDeck.end());
     
     // Spaces events throughout deck (but not at the very front or back)
