@@ -33,6 +33,7 @@ bool ContainsSubstring(string ToCheck, string Substring)
 	return false;
 }
 
+//Reads Properly Formatted .txt Files
 bool Villain::readTXTFile(const string filename) {
     string stance = "";
     string name = "";
@@ -118,6 +119,7 @@ bool Villain::readTXTFile(const string filename) {
 	}
 }
 
+//Reads Properly Formatted .csv Files
 bool Villain::readCSVFile(const string filename) {
 	string EmptyColumn = "";
     string CardStance = "";
@@ -163,12 +165,14 @@ bool Villain::readCSVFile(const string filename) {
 			// cout << cardline << endl;
 			delimiter = cardline.find(",");
 			CurrentStance = cardline.substr(0, delimiter);
+			//Set the Stance of the Cards being Read
 			if(CurrentStance.compare("Aggro") == 0 || CurrentStance.compare("Balance") == 0 || CurrentStance.compare("Subtle") == 0 || CurrentStance.compare("Event") == 0)
 			{
 				CardStance = CurrentStance;
 				//cout << "Current stance of cards is " << CardStance << endl;
 				ReadingCards = false;
 				ReadStance = true;
+				//Set the Number of Events if the Next set of Cards are Event Cards
 				if(CurrentStance.compare("Event") == 0)
 				{
 					cardline.erase(0, delimiter + 1);
@@ -180,6 +184,7 @@ bool Villain::readCSVFile(const string filename) {
 				}
 			}
 			
+			//Record Each Possible Attack Type
 			if(CurrentStance.compare("Stance") == 0 && StancesChecked == false)
 			{
 				//cout << "Determining possible attack types" << endl;
@@ -303,6 +308,7 @@ bool Villain::readCSVFile(const string filename) {
 				cardline.erase(0, delimiter + 1);
 				
 				//Set Types
+				if(Type2Found == false) { type2 = "None"; }
 				newCard.setTypes(type1, type2);
 				Type1Found = false;
 				Type2Found = false;
@@ -327,12 +333,14 @@ bool Villain::readCSVFile(const string filename) {
 	}
 }
 
+//Prints the Entire Deck
 void Villain::printDeck() {
     for(int i = 0; i < newDeck.size(); i++) {
         newDeck.at(i).print();
     }
 }
 
+//Counts the Total Amount of Events Currently in Play
 void Villain::countTotalEvents() {
     for(int i = 0; i < newDeck.size(); i++) {
         if (newDeck.at(i).getStance() == "Event") {
@@ -348,6 +356,7 @@ void Villain::countTotalEvents() {
     //}
 }
 
+//Shuffles the Deck with Events Spaced Throughout
 void Villain::shuffle() {
     countTotalEvents();
     int numCardsPerEvent = 1 + (numCards / (numEvents + 1));
@@ -366,6 +375,7 @@ void Villain::shuffle() {
     //printDeck();
 }
 
+//Prompts the User to Either Keep Playing or Quit the Game
 string Villain::keepPlaying() {
     string choice = "";
     cout << "Enter anything (enter q to quit, e for active events) to continue.\n";
@@ -374,6 +384,7 @@ string Villain::keepPlaying() {
     return choice;
 }
 
+//Shows All Currently Active Events
 void Villain::showActiveEvents() {
     if (eventsActive.size() <= 0) { cout << "No events currently.\n\n"; }
     else {
@@ -381,6 +392,7 @@ void Villain::showActiveEvents() {
     }
 }
 
+//Plays the Villain Deck
 void Villain::playGame() {
     string choice = "";
     do {
