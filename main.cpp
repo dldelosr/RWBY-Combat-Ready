@@ -22,11 +22,11 @@ string AddExtension(string ToAdd)
 	cout << "Please enter the type of the file containing the deck you would like to use." << endl;
 	cout << "Currently supported filetypes include '.txt' files." << endl;
 	cin >> Filetype;
-	while(Filetype.compare(".txt") != 0)
+	while(Filetype.compare(".txt") != 0 || Filetype.compare(".csv") != 0)
 	{
 		Filetype = "";
 		cout << "The type of file you have entered is not supported, please enter a different filetype or enter q to close the program." << endl;
-		cout << "Currently supported filetypes include '.txt' files." << endl;
+		cout << "Currently supported filetypes include '.txt' and '.csv' files." << endl;
 		cin >> Filetype;
 		if (Filetype == "Q" || Filetype == "q") { return "q"; }
 	}
@@ -43,26 +43,46 @@ int main()
     //Get Filename, Filetype, and add a file extension to the end if necessary
     cout << "Please enter the name of the file containing the deck you would like to use." << endl;
     cin >> Filename;
-    if(Contains(Filename, ".txt") == false)
+    if(Contains(Filename, ".txt") == false && Contains(Filename, ".csv") == false)
     {
 		Filename = AddExtension(Filename);
 		if (Filename == "Q" || Filename == "q") { return 0; }
 	}
 	
 	// Check if the file can be opened
-    while (newVillain.readFile(Filename) == false)
-    {
-		Filename = "";
-		cout << "The file you have entered could not be opened, please enter a different filename or enter q to close the program." << endl;
-		cin >> Filename;
-		if (Filename == "Q" || Filename == "q") { return 0; }
-		if(Contains(Filename, ".txt") == false)
-		{ 
-			Filename = AddExtension(Filename);
+	if(Contains(Filename, ".txt"))
+	{
+		while (newVillain.readTXTFile(Filename) == false)
+		{
+			Filename = "";
+			cout << "The file you have entered could not be opened, please enter a different filename or enter q to close the program." << endl;
+			cin >> Filename;
 			if (Filename == "Q" || Filename == "q") { return 0; }
+			if(Contains(Filename, ".txt") == false)
+			{ 
+				Filename = AddExtension(Filename);
+				if (Filename == "Q" || Filename == "q") { return 0; }
+			}
+		}
+	}
+	else if(Contains(Filename, ".csv"))
+	{
+		//cout << "Attempting to read file." << endl;
+		while (newVillain.readCSVFile(Filename) == false)
+		{
+			Filename = "";
+			cout << "The file you have entered could not be opened, please enter a different filename or enter q to close the program." << endl;
+			cin >> Filename;
+			if (Filename == "Q" || Filename == "q") { return 0; }
+			if(Contains(Filename, ".csv") == false)
+			{ 
+				Filename = AddExtension(Filename);
+				if (Filename == "Q" || Filename == "q") { return 0; }
+			}
 		}
 	}
 	
+	//newVillain.printDeck();
 	//Shuffle the deck and play the game
     newVillain.shuffle();
     newVillain.playGame();

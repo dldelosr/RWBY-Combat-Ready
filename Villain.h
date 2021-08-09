@@ -23,7 +23,8 @@ class Villain {
         Villain(const Villain &copy);
         ~Villain();
         
-        bool readFile(const string filename);
+        bool readTXTFile(const string filename);
+        bool readCSVFile(const string filename);
         void printDeck();
         void countTotalEvents();
         void shuffle();
