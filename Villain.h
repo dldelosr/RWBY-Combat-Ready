@@ -25,6 +25,7 @@ class Villain {
         
         bool readTXTFile(const string filename);
         bool readCSVFile(const string filename);
+        bool readTSVFile(const string filename);
         void printDeck();
         void countTotalEvents();
         void shuffle();
